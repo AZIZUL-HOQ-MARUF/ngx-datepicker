@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <input class="form-control" placeholder="Datepicker" [(ngModel)]="startDate" name="startDate" bsDatepicker
+        [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', containerClass: 'theme-blue' }"[maxDate]="endDate">
+    </div>
+
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <input class="form-control" placeholder="Datepicker" [(ngModel)]="endDate" name="endDate" bsDatepicker
+        [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', containerClass: 'theme-blue' }" [minDate]="startDate">
+    </div>
+  </div>
+  <div class="col-xs-12 col-12 col-md-4 form-group">
+    <pre>start date :{{startDate | date : 'dd/MM/yyyy'}}</pre>
+    <pre>end date :{{endDate | date : 'dd/MM/yyyy'}}</pre>
+  </div>
+</div>
